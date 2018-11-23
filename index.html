@@ -12,7 +12,7 @@
 
             function playRound(playerSelection, computerSelection) {
                 if (playerSelection === computerSelection) {
-                    console.log('How boring, it\'s a draw');
+                    console.log('How boring, it\'s a draw.');
                     return 0;
                 } else if ((playerSelection === 'Rock' && computerSelection === 'Scissors') ||
                            (playerSelection === 'Paper' && computerSelection === 'Rock') ||
@@ -47,6 +47,7 @@
                 let playerSelection;
                 let computerSelection;
                 for (i = 0; i < 5; i++) {
+                    console.log('Round ' + (i + 1) + ':');
                     playerSelection = formatInput(prompt('Choose a weapon (Rock, Paper or Scissors).'));
                     while(!checkPlayerInput(playerSelection)) {
                         playerSelection = formatInput(prompt('Invalid weapon, you may choose again (Rock, Paper or Scissors).'));
